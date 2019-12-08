@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_home"
+    android:gravity="center"
+
+
+    tools:context="com.networds.networds.MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#00FCF7F7"
+        android:src="@drawable/ic_menu"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Networds"
+        android:textColor="#FBFBFB"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/view_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+
+            >
+
+            <com.networds.networds.ScrollLayout
+                android:id="@+id/scroll_down_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:foregroundGravity="center"
+                android:visibility="visible"
+                app:allowHorizontalScroll="false"
+                app:exitOffset="0dp"
+
+                app:isSupportExit="true"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+
+                app:layout_constraintHeight_percent="0.81"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1"
+                app:maxOffset="260dp"
+                app:minOffset="0dp"
+                app:mode="exit">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:background="#00000000"
+                    android:visibility="visible" />
+
+            </com.networds.networds.ScrollLayout>
+
+            <com.networds.networds.ChatEditText
+                android:id="@+id/editText"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="#00000000"
+                android:ems="10"
+                android:hint="input"
+                android:inputType="textPersonName"
+                android:layerType="software"
+                android:textColor="@color/text_color"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_frame"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.09"
+                app:layout_constraintStart_toEndOf="@+id/textView20"
+                app:layout_constraintTop_toTopOf="@+id/edit_frame"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.63" />
+
+            <ImageView
+                android:id="@+id/edit_frame"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/ic_rectangle"
+                android:ems="10"
+
+                android:inputType="textPersonName"
+                android:text=""
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/bottomText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/middleText"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.91" />
+
+            <TextView
+                android:id="@+id/middleText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.07"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_down_layout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <TextView
+                android:id="@+id/bottomText"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_frame"
+                app:layout_constraintHeight_default="percent"
+
+                app:layout_constraintHeight_percent="0.03"
+                app:layout_constraintStart_toEndOf="@+id/textView19"
+                app:layout_constraintTop_toTopOf="@+id/edit_frame"
+                app:layout_constraintVertical_bias="0.473"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.09" />
+
+            <ImageView
+                android:id="@+id/mic"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_mic"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_frame"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.03"
+                app:layout_constraintStart_toEndOf="@+id/textView21"
+                app:layout_constraintTop_toTopOf="@+id/edit_frame"
+                app:layout_constraintVertical_bias="0.473"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.09" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="40dp"
+                android:text="TextView"
+
+                app:layout_constraintBottom_toBottomOf="@+id/edit_frame"
+                app:layout_constraintStart_toStartOf="@+id/edit_frame"
+                app:layout_constraintTop_toTopOf="@+id/edit_frame"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.01" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="0dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/search"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.01"
+                tools:layout_editor_absoluteY="599dp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="0dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/editText"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.01"
+                tools:layout_editor_absoluteY="600dp" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/edit_frame"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.01"
+                tools:layout_editor_absoluteY="599dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/view_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.208"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.networds.networds.TagCloudView
+                android:id="@+id/tag_cloud"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingBottom="0dp"
+                android:visibility="visible"
+                app:autoScrollMode="uniform"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1"
+                app:radiusPercent="0.8"
+                app:scrollSpeed="10">
+
+            </com.networds.networds.TagCloudView>
+
+            <ImageButton
+                android:id="@+id/start"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="#00F8F4F4"
+                android:src="@drawable/ic_everydaywords1"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.6" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="18/50"
+                android:textColor="#D52A58"
+                android:textSize="30sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tag_cloud"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.3" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="S T A R T"
+                android:textColor="#69F9F9"
+                android:textSize="24sp"
+                android:visibility="visible"
+
+                app:layout_constraintBottom_toBottomOf="@+id/start"
+                app:layout_constraintEnd_toEndOf="@+id/start"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintStart_toStartOf="@+id/start"
+                app:layout_constraintTop_toTopOf="@+id/start"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.2" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
